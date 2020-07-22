@@ -15,12 +15,14 @@ posts = [
     }
 ]
 
+
 def home(request):
     context = {
-        'posts':posts,
+        'posts': posts,
         'title': 'Home'
     }
-    return render(request,'blog/home.html',context)
+    return render(request, 'blog/home.html', context)
+
 
 def about(request):
-    return render(request,'blog/about.html',{'title': 'About Us'})
+    return render(request, 'blog/about.html', {'title': 'About Us'})
