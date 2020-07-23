@@ -7,3 +7,4 @@ class Post(models.Model):
     content = models.TextField()
     date_posted = models.DateTimeField()
     author = models.ForeignKey(User,on_delete=models.CASCADE)
+    
