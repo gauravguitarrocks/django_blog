@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from .form import UserRegisterForm
 
@@ -9,9 +9,9 @@ def register(request):
         if form.is_valid():
             form.save()
             user_name = form.cleaned_data.get('username')
-            messages.success(request,f'Account for {user_name} created succesfully')
+            messages.success(
+                request, f'Account for {user_name} created succesfully')
             return redirect('blogs-home')
     else:
         form = UserRegisterForm()
-    return render(request,'users/register.html',{'form':form})
-
+    return render(request, 'users/register.html', {'form': form})
