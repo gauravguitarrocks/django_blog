@@ -3,6 +3,7 @@
 <h1>Welcome to the blog page.</h1>
 {%for post in posts%}
 <article class="media content-section">
+    <img src="{{ post.author.profile.image.url }}" class="rounded-circles article-img" alt="">
     <div class="media-body">
         <div class="article-metadata">
             <a class="mr-2" href="#">{{ post.author }}</a>
